@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Grading System</h1>
+    <input type="number" placeholder="Enter Your Score" id="myScore">
+    <div id="result"></div>
+    <button onclick="checkGrade()">Submit</button>
+    <script>
+        {/* var age = 7
+        var name = "Kunle"
+        var isItTrue = true
+        //alert(typeof(isItTrue))
+        alert(5==="5") */}
+        {/* var gender = 'fish'
+        if(gender=='male'){
+            alert('Na man you be')
+        }else if(gender=='female'){
+            alert('Na female you be')
+        }else{
+            alert('I know you not')
+        } */}
+
+        function checkGrade(){
+            var score = document.getElementById('myScore').value
+            if(score<40){
+                alert('Fail')
+                result.innerText = 'Fail'
+            }else if(score>=40&&score<70){
+                alert('Good')
+            }else if(score>=70&&score<=100){
+                alert('Excellent')
+            }
+            
+        }
+    </script>
+</body>
+</html>

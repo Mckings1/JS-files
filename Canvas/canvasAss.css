@@ -1,0 +1,20 @@
+#paletteColor{
+    height: 40vh;
+    width: 10vh;
+    float: right;
+    border: 2px solid blue;
+    margin-right: 20vh;
+    padding: 20px;
+}
+#paletteColor img{
+    height: auto;
+    width: 100%;
+}
+
+#canvas{
+    margin: auto;
+    margin-left: 20vh;
+}
+#clickHere{
+    margin-left: 20vh;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="disp"></div>
+
+    <table id="tab">
+       
+    </table>
+    <input type="text" placeholder="Enter your number" id="myNumb">
+    <button onclick="multiply()">Create Multiplication Table</button>
+    <script>
+        // function multiply(){
+        //     var userValue = parseInt(myNumb.value)
+        //     tab.innerHTML = "<tr>"
+        //     for(let i=1;i<13;i++){
+        //         tab.innerHTML += "<td>" +userValue+"x"+ i +"="+ userValue*i + "</td>"
+        //         // console.log(userValue+"x"+ i +"="+ userValue*i)
+        //         // console.log(`${userValue} x ${i} = ${userValue*i}`)
+        //     }
+        //     tab.innerHTML +="</tr>"
+
+        // }
+        
+    // for (let i = 0 ; i<51 ; i++) {
+    //     if(i%3==0 && i%5==0){
+    //         console.log('fizzbuzz'+i)
+    //     }
+    //     else if(i%3==0){
+    //         console.log('fizz'+i)
+    //     }else if(i%5==0){
+    //         console.log('buzz'+i)
+    //     }
+    // }     
+        for (let i = 1; i<13; i++) {
+          for(let j=1;j<13;j++){
+             console.log(i+"*"+j+"="+i*j)
+          }
+        }
+    </script>
+</body>
+</html>

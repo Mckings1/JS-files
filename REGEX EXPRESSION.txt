@@ -1,0 +1,14 @@
+REGEX: REGULAR EXPRESSION 
+Match Patterns.
+
+//
+a-zA-Z0-9
+
+
+/^[\d]{11}$/gm (for 11 digits number)
+
+1. word characters, must end with @
+
+/^[\w]+[@]$/gm
+
+alabioluwasegun8@gmail.com

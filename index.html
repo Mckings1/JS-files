@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSINTRO</title>
+    <script>
+		function countDown()
+		{
+			var seconds = s.value;
+			if(seconds > 1)
+			{
+				seconds = seconds - 1;
+			}
+			else
+			{
+				var minute = m.value;
+				if(minute > 1)
+				{
+					minute = minute -1;
+					m.value = minute;
+					seconds = 60;
+				}
+				else
+				{
+					var hour = h.value;
+					if(hour >= 1)
+		    			{
+						hour = hour-1;
+						h.value = hour;
+						m.value = 60;
+						s.value = 60;
+					}
+					else
+					{
+						// alert("TimeUp!!!");
+                        
+					}
+				}
+			}
+                s.value = seconds;
+                // if(hour != 0 && minute != 1 && second != 1)
+                setTimeout("countDown()",1000); 
+		}
+
+	</script>
+</head>
+
+
+<body style="background-color:rgb(181, 179, 243);">
+
+        <table align="center" border="30px">
+
+            <tr align="center"><td colspan="3">CountDown Timer </td></tr>
+            <tr>
+            <td> <input type="text" placeholder="HH" id="h"></td>
+            <td> <input type="text" placeholder="MM" id="m"></td>
+            <td> <input type="text" placeholder="SS" id="s"></td>
+
+            </tr>
+
+
+            <tr align="center"><td colspan="3"> <button onclick="countDown()">Start Counting</button> </td></tr>
+            <!-- <tr align="center"><td colspan="3"> <button onclick="countDown()">STOP</button> </td></tr> -->
+			
+        </table>
+    </body>
+</html>

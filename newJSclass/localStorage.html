@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setLocalStorage()">
+    <script>
+        function setLocalStorage(){
+            let allStudents = [
+                {name:"Kunle",school:'SQI',age:30},
+                {name:"John",school:'Lautech',age:800},]
+                
+            localStorage.setItem("localAllStudents", JSON.stringify(allStudents))
+            // localStorage.localAllStudents = JSON.stringify(allStudents)
+
+        }
+        
+    </script>
+</body>
+</html>

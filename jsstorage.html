@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSstorage</title>
+
+    <script>
+
+            b = JSON.parse(localStorage.getItem('storageLists'));
+                    if (b != null){
+                        applicantsA = b;
+                    } else{ 
+                        applicantsA = [];
+                    }
+
+        
+            function register()
+            {
+                firstName = fn.value;
+                lastName = ln.value;
+                
+
+                applicantsA.push({
+                        "firstName": firstName, "lastName":lastName
+                    });
+                    aList();    
+
+            }
+
+
+         function aList()
+         { 
+             a = JSON.stringify(applicantsA);
+            localStorage.setItem('storageLists', a); 
+
+             var display = "";
+             var w = 1;
+
+             for (let i = 0;  i< applicantsA.length; i++) 
+             {
+                       display += "<tr><td>" + w + "</td><td>" + applicantsA[i].firstName + "</td><td>" + applicantsA[i].lastName +"</td><td onclick='deleter("+i+")'><img src ='delete.png' width =20 height= 20/></td><td onclick='editer("+i+")'><img src ='edit.png' width =20 height= 20 /></td> </tr>";    
+                       w++;
+             }
+             document.getElementById("tshow").innerHTML = display;
+         }
+            
+
+    
+         function deleter(y)
+         {
+             if(confirm("Are you sure you want to delete?"))
+             {
+                 applicantsA.splice(y, 1);
+             }
+             else{
+                 alert('delete cancelled')
+             }
+
+             aList();
+            //  alert(cancel);
+         }
+
+         function editer(z){
+                fn.value = applicantsA[z].firstName;
+                ln.value = applicantsA[z].lastName;
+
+         }
+
+    </script>
+</head>
+
+<body onload="aList()">
+    <table align="center" border="1px">
+
+        <tr align="center" border="1px">
+            <td colspan="3">Job Application Form</td>
+        </tr>
+        <tr>
+            <td>firstName:</td> <td><input id="fn" type="text"></td>
+
+        </tr>
+        <tr>
+            <td>lastName:</td> <td><input id="ln" type="text"></td>
+        </tr>
+        <tr><td align="center" colspan="3"> <button onclick="register()">Submit</button></td></tr>
+    </table>
+        <br>
+        <table align="center" border="1" cellpadding="5px">
+            <thead>
+                <tr>
+                   <tr align="center"> <td colspan="5">Applicants Lists</td></tr>
+                    <th>S/N</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th title="Delete">D</th>
+                    <th>Edit</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tshow">
+
+            </tbody>
+        </table>
+</body>
+</html>

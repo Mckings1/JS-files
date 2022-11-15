@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function mGenerator () 
+        {
+            ih = "<tr>";
+                sam = Number(sf.value) + Number(b.value);
+                for (let i= Number(sf.value); i<sam; i++) 
+                {
+                    ih += "<td>" + i + "Times" ;
+                    ih += "<table>"
+                        for (let a = 1; a<=l.value; a++) 
+                        {
+                            result = i * a
+                            ih += "<tr> <td>" + i + "x" + a + "=" + result + "</td> </tr>"
+                        }
+                        ih += "</table>"
+                }
+                        ih += "</tr>"
+
+                mTable.innerHTML = ih
+        }
+</script>
+
+</head>
+<body>
+    <table align="center" border="5px">
+
+        <tr align="center">
+            <td colspan="2"> <b>
+            Multiplication Table Generator</b></td>
+        </tr>
+
+        <tr align="center">
+            <td>Enter Number of Blocks</td>
+            <td> <input type="text" name="" id="b"></td>
+        </tr>
+
+        <tr align="center">
+            <td>Enter Number of Lines</td>
+            <td><input type="text" name="" id="l"></td>
+        </tr>
+        
+        <tr align="center">
+            <td>Start from</td>
+            <td><input type="text" name="" id="sf"></td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2"> <button onclick="mGenerator ()">
+            Generate</button></td>
+        </tr>
+
+
+    </table>
+
+    <table border="2px" align="center" id="mTable">
+
+    </table>
+</body>
+</html>
